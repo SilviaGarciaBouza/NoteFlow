@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Notas</title>  
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="notas.css">
+</head>
+<body>
+    <h2 class="app-title">Mis Notas Increíbles</h2>
+    <div id="notes_container">
+        <form id="note_form" action="/formulario" method="POST"> 
+            <label for="note_title">Crear una nueva nota:</label><br><br>
+                <input type="text" id="note_title" placeholder="Título"><br><br>
+                <textarea id="note_content" rows="10" cols="50" placeholder="Ver o editar tus notas aquí..."></textarea><br><br>
+            <label for="note_date">Fecha:</label>
+                <input type="date" id="note_date" placeholder="Fecha"><br><br>
+            <label for="note_color">Color:</label>
+                <input type="color" id="note_color"><br><br>
+            <label for="note_urgency">Urgencia:</label>
+            <select id="note_urgency">
+                <option value="normal">Normal</option>
+                <option value="urgente">Urgente</option>
+            </select><br><br>
+            <button type="submit" >Crear Nota</button> 
+            <button type="reset">Limpiar</button>
+        </form>
+        <h3>Notas Existentes</h3>
+        <div id="existing_notes_container">
+            <div id="note-items">
+            </div>
+        </div>
+    </div>
+    <script src="notas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</body>
+</html>
+
+<!--FONDO-->
+<div class="animation-container">
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+</div>
