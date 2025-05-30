@@ -1,32 +1,33 @@
-
 body {
     font-family: sans-serif;
     background-color: #f0f2f5;
-    color: #343a40; 
+    color: #343a40;
     margin: 0;
     padding: 20px;
-    min-height: 100vh; /* toda la altura de la ventana */
+    min-height: 100vh;
+    /* toda la altura de la ventana */
     box-sizing: border-box;
 
 }
+
 h3 {
     text-align: center;
-    color: #2c3e50;  
+    color: #2c3e50;
     margin-bottom: 30px;
     font-weight: 600;
 }
 
 .app-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5em; 
+    font-size: 3.5em;
     font-weight: 700;
     color: #333;
-    text-align: center; 
-    margin-top: 50px; 
-    margin-bottom: 30px; 
-    letter-spacing: 2px; 
-    text-transform: uppercase; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -37,21 +38,24 @@ h3 {
     padding: 20px;
     border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 form {
- 
+
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05); 
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-input, textarea, select {
-    width: calc(100% - 22px); 
+input,
+textarea,
+select {
+    width: calc(100% - 22px);
     padding: 10px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 
     width: 100%;
     padding: 10px;
@@ -59,13 +63,15 @@ input, textarea, select {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
 input[type="color"] {
-    width: 30px; 
-    height: 30px; 
-    padding: 0; 
-    border: 1px solid #ddd; 
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #ddd;
     vertical-align: middle;
 }
+
 button {
     padding: 10px 15px;
     border: none;
@@ -73,21 +79,26 @@ button {
     cursor: pointer;
     margin-right: 10px;
 }
+
 button {
     background-color: #c1d9f3;
     color: rgb(0, 0, 0);
 }
+
 button:hover {
     background-color: #163a5d;
     color: rgb(255, 255, 255);
     transform: scale(1.2);
 }
-.note-item { /* notas generadas */
+
+.note-item {
+    /* notas generadas */
     border: 1px solid #cceeff;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    display: flex; /* alinear texto y botón */
+    display: flex;
+    /* alinear texto y botón */
     justify-content: space-between;
     align-items: center;
 }
@@ -95,35 +106,36 @@ button:hover {
 
 
 /* notas*/
-#existing_notes_container { 
-    padding-top: 20px; 
+#existing_notes_container {
+    padding-top: 20px;
 }
 
 
-#note-items { 
+#note-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-    gap: 25px; /* espacio entre las notas */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    /* espacio entre las notas */
 }
 
 /* estilos  cada Nota  */
-.note-item { 
-    background-color: #fefefe; 
+.note-item {
+    background-color: #fefefe;
     border: 1px solid #e0e0e0;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .note-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .note-item p {
@@ -131,7 +143,8 @@ button:hover {
     line-height: 1.6;
     color: #555;
     margin-bottom: 15px;
-    flex-grow: 1; /*p ocupe el espacio disponible */
+    flex-grow: 1;
+    /*p ocupe el espacio disponible */
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -141,7 +154,8 @@ button:hover {
 
 
 .note-item .note-color-box {
-    width: 22px; /* Tamaño del cuadro de color */
+    width: 22px;
+    /* Tamaño del cuadro de color */
     height: 22px;
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -156,33 +170,35 @@ button:hover {
 
 
 .animation-container {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;   
-    height: 100vh;  
-    overflow: hidden; 
-    pointer-events: none; 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
     z-index: -1;
 }
 
 
-.square, .circle, .triangle {
-    position: absolute; 
-    opacity: 0.6; 
+.square,
+.circle,
+.triangle {
+    position: absolute;
+    opacity: 0.6;
 }
 
 .square {
     width: 60px;
     height: 60px;
-    background-color: #55cfff; 
+    background-color: #55cfff;
 }
 
 .circle {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #ff99aa; 
+    background-color: #ff99aa;
 }
 
 .triangle {
@@ -190,21 +206,30 @@ button:hover {
     height: 0;
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
-    border-bottom: 80px solid #ffdd44; 
-    transform-origin: 50% 75%; 
+    border-bottom: 80px solid #ffdd44;
+    transform-origin: 50% 75%;
 }
 
 
-.square:nth-child(even) { background-color: #88eeff; }
-.circle:nth-child(odd) { background-color: #ffccbb; }
-.triangle:nth-child(3n) { border-bottom-color: #aadd88; }
+.square:nth-child(even) {
+    background-color: #88eeff;
+}
+
+.circle:nth-child(odd) {
+    background-color: #ffccbb;
+}
+
+.triangle:nth-child(3n) {
+    border-bottom-color: #aadd88;
+}
 
 
 .note-item {
-    
-    position: relative; /*nota sobre animacion*/
-    z-index: 1; 
 
-    background-color: var(--note-bg-color, #f0f0f0); 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    position: relative;
+    /*nota sobre animacion*/
+    z-index: 1;
+
+    background-color: var(--note-bg-color, #f0f0f0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
