@@ -198,46 +198,33 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
 
-
-    //fondo
-    function randomValues() {
-        anime({
-            targets: ".square, .circle, .triangle",
-            translateX: function () {
-                return anime.random(-500, window.innerWidth + 500);
-            },
-            translateY: function () {
-                return anime.random(-300, window.innerHeight + 300);
-            },
-            rotate: function () {
-                return anime.random(0, 360);
-            },
-            scale: function () {
-                return anime.random(0.5, 2);
-            },
-            duration: function () { return anime.random(2000, 5000); },
-            easing: "easeInOutQuad",
-            loop: true
-        });
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /*
+        //fondo
+        function randomValues() {
+            anime({
+                targets: ".square, .circle, .triangle",
+                translateX: function () {
+                    return anime.random(-500, window.innerWidth + 500);
+                },
+                translateY: function () {
+                    return anime.random(-300, window.innerHeight + 300);
+                },
+                rotate: function () {
+                    return anime.random(0, 360);
+                },
+                scale: function () {
+                    return anime.random(0.5, 2);
+                },
+                duration: function () { return anime.random(2000, 5000); },
+                easing: "easeInOutQuad",
+                loop: true
+            });
+        }
+    */
 
 
     loadNotes();
-    randomValues();
+    // randomValues();
 
 });
 
