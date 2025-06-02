@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", (event) => {
     // obtener referencias a los elementos del DOM
     const noteForm = document.getElementById("note_form");
@@ -7,6 +10,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const noteDateInput = document.getElementById("note_date");
     const noteColorInput = document.getElementById("note_color");
     const noteUrgencySelect = document.getElementById("note_urgency");
+    const noteSortSelect = document.getElementById("note_sort");
+
+
+    const figuresContainer = document.getElementById("animation-container");
+    const shapeType = ["square", "circle", "triangle"];
+
+
+
+    // crear figuras
+
+    function createFigures() {
+        for (let i = 0; i < 80; i++) {
+            const shapeDiv = document.createElement("div");
+            // asignar una clase de forma aleatoria
+            shapeDiv.className = shapeType[i % shapeType.length];
+            figuresContainer.appendChild(shapeDiv);
+        }
+    }
+
 
     // crear y añadir nueva nota
     function createNote(event) {
@@ -114,6 +136,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // el array de notas a una cadena JSON y garda
         localStorage.setItem("myNotesApp_notes", JSON.stringify(notes));
         console.log("Notas guardadas en localStorage");
+
     }
 
 
@@ -173,7 +196,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
                 let noteParagraph = document.createElement("p");
                 // rconstruye el texto da nota
-                noteParagraph.textContent = `${noteData.title ? noteData.title + ': ' : ''}${noteData.content} - ${noteData.date} - ${noteData.urgency}`;
+                noteParagraph.textContent = `${noteData.title ? noteData.title + ': ' : ''}${noteData.content} : ${noteData.date} : ${noteData.urgency}`;
+                // noteParagraph.textContent = `${noteData.title ? noteData.title + ': ' : ''}${noteData.content} - ${noteData.date} - ${noteData.urgency}`;
                 noteParagraph.style.color = noteData.color;
 
                 let deleteButton = document.createElement("button");
@@ -197,6 +221,44 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     }
 
+
+    // Ordenar notas por título
+    function sortNotesByTitle() {
+        let notes = Array.from(document.querySelectorAll(".note-item"));
+        notes.sort((a, b) => {
+            const titleA = a.querySelector("p").textContent.split(":")[0].toLowerCase();
+            const titleB = b.querySelector("p").textContent.split(":")[0].toLowerCase();
+            return titleA.localeCompare(titleB);
+        });
+        notes.forEach(note => {
+            notesListContainer.appendChild(note);
+        });
+    }
+
+
+    // Ordenar notas por fecha
+    function sortNotesByDate() {
+        let notes = Array.from(document.querySelectorAll(".note-item"));
+        notes.sort((a, b) => {
+            const dateA = Date.parse(a.querySelector("p").textContent.split(": ")[2]);
+            console.log(dateA);
+            const dateB = Date.parse(b.querySelector("p").textContent.split(": ")[2]);
+            console.log(dateB);
+            return new Date(dateA) - new Date(dateB);
+        });
+        notes.forEach(note => {
+            notesListContainer.appendChild(note);
+        });
+    }
+
+    // Add el event listener para ordenar por título
+    noteSortSelect.addEventListener("change", function () {
+        if (noteSortSelect.value === "titulo") {
+            sortNotesByTitle();
+        } else if (noteSortSelect.value === "fecha") {
+            sortNotesByDate();
+        }
+    });
 
     /*
         //fondo
@@ -222,9 +284,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     */
 
-
+    createFigures()
     loadNotes();
+    createFigures();
+    sortNotesByTitle();
+
     // randomValues();
+
 
 });
 

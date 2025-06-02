@@ -52,7 +52,8 @@ form {
 
 input,
 textarea,
-select {
+select,
+#note_sort {
     width: calc(100% - 22px);
     padding: 10px;
     box-sizing: border-box;
@@ -611,4 +612,64 @@ button:hover {
     left: 90%;
     top: 35%;
     animation-delay: -24s;
+}
+
+.animation-container .triangle:nth-child(49) {
+    left: 30%;
+    top: 80%;
+    animation-delay: -24.5s;
+}
+
+.animation-container .triangle:nth-child(50) {
+    left: 70%;
+    top: 10%;
+    animation-delay: -25s;
+}
+
+.animation-container .triangle:nth-child(51) {
+    left: 20%;
+    top: 40%;
+    animation-delay: -25.5s;
+}
+
+.animation-container .triangle:nth-child(52) {
+    left: 80%;
+    top: 75%;
+    animation-delay: -26s;
+}
+
+.animation-container .triangle:nth-child(53) {
+    left: 10%;
+    top: 5%;
+    animation-delay: -26.5s;
+}
+
+.animation-container .triangle:nth-child(54) {
+    left: 90%;
+    top: 60%;
+    animation-delay: -27s;
+}
+
+.animation-container .triangle:nth-child(55) {
+    left: 30%;
+    top: 20%;
+    animation-delay: -27.5s;
+}
+
+.animation-container .triangle:nth-child(56) {
+    left: 70%;
+    top: 85%;
+    animation-delay: -28s;
+}
+
+.animation-container .triangle:nth-child(57) {
+    left: 5%;
+    top: 30%;
+    animation-delay: -28.5s;
+}
+
+.animation-container .triangle:nth-child(58) {
+    left: 85%;
+    top: 10%;
+    animation-delay: -29s;
 }
