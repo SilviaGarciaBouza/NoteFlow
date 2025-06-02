@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const noteColorInput = document.getElementById("note_color");
     const noteUrgencySelect = document.getElementById("note_urgency");
     const noteSortSelect = document.getElementById("note_sort");
+    const backButton = document.getElementById("backButton");
+
+    //  boton "Volver Atrás"
+    backButton.addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
 
 
     const figuresContainer = document.getElementById("animation-container");
